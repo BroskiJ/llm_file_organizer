@@ -3,7 +3,7 @@ from . import config
 
 class LLMAgent:
     """
-    The decision-making module that uses the Gemma LLM via Ollama.
+    The decision-making module that uses the LLM via Ollama.
     """
     def __init__(self):
         """

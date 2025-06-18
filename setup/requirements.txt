@@ -1,4 +1,4 @@
-# Requirements for Gemma File Organizer (pip version)
+# Requirements for LLM File Organizer (pip version)
 # Python 3.12+
 
 # Core dependencies

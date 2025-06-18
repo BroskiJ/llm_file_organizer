@@ -6,7 +6,7 @@ This guide will walk you through installing, configuring, and running the LLM Fi
 
 ```bash
 git clone <your-repo-url>
-cd gemma_file_organizer
+cd llm_file_organizer
 ```
 
 ## 2. Set Up the Python Environment
@@ -78,7 +78,7 @@ python main.py <file-path>
 ```bat
 @echo off
 REM --- CONFIGURE YOUR PATHS HERE ---
-set PROJECT_PATH="C:\path\to\gemma_file_organizer"
+set PROJECT_PATH="C:\path\to\llm_file_organizer"
 set CONDA_PATH="C:\path\to\anaconda3"
 
 REM Activate the conda environment

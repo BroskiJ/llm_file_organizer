@@ -1,4 +1,4 @@
-# Gemma File Organizer
+# LLM File Organizer
 
 A smart file organization tool that uses vector embeddings and a local LLM agent to automatically organize your files based on their content and context.
 
@@ -19,7 +19,7 @@ A smart file organization tool that uses vector embeddings and a local LLM agent
 ```bat
 @echo off
 REM --- CONFIGURE YOUR PATHS HERE ---
-set PROJECT_PATH="C:\path\to\gemma_file_organizer"
+set PROJECT_PATH="C:\path\to\llm_file_organizer"
 set CONDA_PATH="C:\path\to\anaconda3"
 
 REM Activate the conda environment
