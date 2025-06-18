@@ -5,7 +5,7 @@ from file_organizer.llm_agent import LLMAgent
 from file_organizer.file_manager import FileManager
 from file_organizer.embeddors.embeddor_registry import EmbeddorRegistry
 
-def run_organization_workflow(file_path: str):
+def run_organization_workflow(file_path: str, auto_confirm: bool = False):
     """
     Runs the full organization workflow for a single, specified file.
     """
@@ -60,7 +60,11 @@ def run_organization_workflow(file_path: str):
 
         # Get user confirmation before proceeding
         print(f"\nProposed Action: Move \n'{src_path}' \nto \n'{dest_path}'")
-        user_confirmation = input("Proceed with file move? [Y/N]: ")
+        if auto_confirm:
+            user_confirmation = 'y'
+            print("Auto-confirm enabled: proceeding without user input.")
+        else:
+            user_confirmation = input("Proceed with file move? [Y/N]: ")
 
         if user_confirmation.lower().strip() == 'y':
             print(f"\n--- Executing File Action ---")
@@ -81,8 +85,13 @@ def main():
         type=str,
         help="The full path to the file to be organized."
     )
+    parser.add_argument(
+        "--force", "-f",
+        action="store_true",
+        help="Bypass user confirmation and automatically move the file."
+    )
     args = parser.parse_args()
-    run_organization_workflow(args.file_path)
+    run_organization_workflow(args.file_path, auto_confirm=args.yes)
 
 if __name__ == "__main__":
     main()
