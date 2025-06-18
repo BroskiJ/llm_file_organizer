@@ -1,0 +1,35 @@
+# A conda environment for the LLM File Organizer project
+#
+# To create this environment, run:
+# conda env create -f environment.yml
+#
+# To update this environment after changing the file, run:
+# conda env update -f environment.yml --prune
+#
+name: llm_file_organizer
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Python and essential packages
+  - python=3.12
+
+  # PyTorch (choose one: GPU or CPU)
+  # For GPU support:
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=12.1
+
+  # For CPU support, uncomment the line below and comment out the GPU lines:
+  # - pytorch-cpu  # Uncomment for CPU-only
+
+  # Project-specific packages
+  - langchain
+  - chromadb
+  - ollama
+  - transformers
+  - sentence-transformers

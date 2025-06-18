@@ -1,5 +1,8 @@
 import os
 
+# Ensure the script works from any directory by setting the working directory to the project root
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
 CONFIG_TEMPLATE = '''
 import os
 

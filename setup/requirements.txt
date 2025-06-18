@@ -1,0 +1,19 @@
+# Requirements for Gemma File Organizer (pip version)
+# Python 3.12+
+
+# Core dependencies
+langchain
+chromadb
+ollama
+transformers
+sentence-transformers
+pypdf
+
+# PyTorch (choose one: GPU or CPU)
+# For GPU (recommended for Ollama and local LLMs):
+torch
+# For CPU-only (unusual for local LLMs, but supported):
+# torch==<latest-cpu-version>  # See https://pytorch.org/get-started/locally/ for details
+# or install with: pip install torch --index-url https://download.pytorch.org/whl/cpu
+
+# Optional: torchvision, torchaudio if needed for your use case
