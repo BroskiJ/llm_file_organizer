@@ -63,6 +63,7 @@ See [SETUP.md](./SETUP.md) for detailed installation and configuration instructi
 - Ollama (for local LLM agent)
 - ChromaDB
 - LangChain
+- pypdf (for PDF file support)
 
 ## License
 

@@ -118,6 +118,7 @@ See your OS documentation or file manager help for details on adding context men
 - Ollama (for local LLM agent)
 - ChromaDB
 - LangChain
+- pypdf (for PDF file support)
 
 ## 9. Troubleshooting & Tips
 
