@@ -10,61 +10,6 @@ A smart file organization tool that uses vector embeddings and a local LLM agent
 - Supports multiple file types (text, PDF, and more)
 - Easily configurable and extensible
 
-## Getting Started
-
-### 1. Clone the Repository
-
-```bash
-git clone <your-repo-url>
-cd gemma_file_organizer
-```
-
-### 2. Set Up the Conda Environment
-
-```bash
-conda env create -f setup/environment.yml
-conda activate llm_file_organizer
-```
-
-Or, if you prefer not to use Conda, install dependencies with pip:
-
-```bash
-pip install -r setup/requirements.txt
-```
-
-> **Note:** PyTorch is used by ChromaDB for GPU acceleration in this project. Ollama has its own GPU support and does not depend on PyTorch. If you do not have a compatible GPU, follow the directions in the `setup/environment.yml` file (or 'setup/requirements.txt' if using pip) to install the appropriate (CPU or GPU) version of PyTorch for your system.
-
-### 3. Configure the Project
-
-- Edit `file_organizer/config.py` to set your model and database preferences.
-- You can generate a default config file with:
-
-```bash
-python setup/create_config_file.py
-```
-
-### 4. Build the Knowledge Base
-
-Scan and ingest your files:
-
-```bash
-python build_knowledge_base.py <directory1> <directory2> ...
-```
-
-Or use the `--fresh-build` flag to reset the database:
-
-```bash
-python build_knowledge_base.py --fresh-build <directory>
-```
-
-### 5. Organize Files
-
-Run the main script to organize files using the LLM agent:
-
-```bash
-python main.py <file-path>
-```
-
 ## Intended Workflow
 
 ### Windows
@@ -95,6 +40,10 @@ python main.py %1
 - Add a custom action in your file manager (e.g., Nautilus, Dolphin, Thunar) to run the script on selected files. This is usually found in the file manager's preferences under 'Custom Actions' or 'Scripts'.
 
 See your OS documentation or file manager help for details on adding context menu actions.
+
+## Setup
+
+See [SETUP.md](./SETUP.md) for detailed installation and configuration instructions.
 
 ## File Structure
 
