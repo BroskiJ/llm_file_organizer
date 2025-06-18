@@ -30,7 +30,7 @@ dependencies:
   # Project-specific packages
   - langchain
   - chromadb
-  - ollama
+  - ollama-python
   - transformers
   - sentence-transformers
   - pypdf

@@ -4,7 +4,7 @@
 # Core dependencies
 langchain
 chromadb
-ollama
+ollama-python
 transformers
 sentence-transformers
 pypdf
