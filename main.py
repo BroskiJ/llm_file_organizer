@@ -91,7 +91,7 @@ def main():
         help="Bypass user confirmation and automatically move the file."
     )
     args = parser.parse_args()
-    run_organization_workflow(args.file_path, auto_confirm=args.yes)
+    run_organization_workflow(args.file_path, auto_confirm=args.force)
 
 if __name__ == "__main__":
     main()
